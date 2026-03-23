@@ -29,40 +29,7 @@ export default function Landing() {
         </button>
       </header>
 
-      {/* Hero Section */}
-      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '0 2rem', textAlign: 'center', position: 'relative', zIndex: 10 }}>
-        <div style={{ padding: '8px 16px', background: 'rgba(6, 182, 212, 0.1)', color: 'var(--color-accent-cyan)', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 600, marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <Zap size={14} /> Novo Sistema V2 Liberado
-        </div>
-
-        <h1 style={{ fontSize: '4rem', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', maxWidth: '800px' }}>
-          Inteligência em Gestão de <span style={{ background: 'linear-gradient(to right, var(--color-accent-blue), var(--color-accent-cyan))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Carteira Premium</span>
-        </h1>
-        
-        <p className="text-muted" style={{ fontSize: '1.25rem', maxWidth: '600px', marginBottom: '3rem', lineHeight: 1.6 }}>
-          Transforme seus dados em ações estratégicas. Uma plataforma exclusiva da Corttex para impulsionar suas vendas com análise preditiva e inteligência de mercado.
-        </p>
-
-        <button onClick={() => navigate('/login')} className="btn-primary" style={{ padding: '16px 40px', fontSize: '1.1rem', borderRadius: '30px', boxShadow: '0 8px 30px rgba(59, 130, 246, 0.4)' }}>
-          Acessar Sistema <ArrowRight size={20} />
-        </button>
-
-        {/* Feature Highlights */}
-        <div style={{ display: 'flex', gap: '3rem', marginTop: '5rem' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-            <div style={{ background: 'rgba(255,255,255,0.05)', padding: '12px', borderRadius: '12px' }}><BarChart3 className="text-blue" size={24} /></div>
-            <span style={{ color: 'var(--color-text-main)', fontWeight: 500 }}>Dashboard Executivo</span>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-            <div style={{ background: 'rgba(255,255,255,0.05)', padding: '12px', borderRadius: '12px' }}><Zap className="text-cyan" size={24} /></div>
-            <span style={{ color: 'var(--color-text-main)', fontWeight: 500 }}>Cortex Vision AI</span>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-            <div style={{ background: 'rgba(255,255,255,0.05)', padding: '12px', borderRadius: '12px' }}><ShieldCheck className="text-gold" size={24} /></div>
-            <span style={{ color: 'var(--color-text-main)', fontWeight: 500 }}>Acesso Restrito</span>
-          </div>
-        </div>
-      </main>
+      <main style={{ flex: 1 }}></main>
     </div>
   );
 }

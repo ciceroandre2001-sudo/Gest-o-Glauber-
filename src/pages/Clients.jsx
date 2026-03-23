@@ -25,7 +25,7 @@ export default function Clients() {
   // IA Chat
   const [chatInput, setChatInput] = useState('');
   const [chatMessages, setChatMessages] = useState([
-    { role: 'ai', text: 'Olá! Sou a **Cortex Vision IA** (Integração Cloud 100% Interativa).\n\nEstou pronta para analisar sua carteira de acompanhamento offline diretamente na nuvem! **Vá na aba Configurações** para colar sua chave API gratuita e me fazer qualquer pergunta corporativa.', isHtml: true }
+    { role: 'ai', text: 'Olá! Sou a **Cortex Vision IA** (Integração Cloud 100% Interativa).\n\nEstou pronta para analisar sua carteira de acompanhamento offline diretamente na nuvem! Pode me fazer qualquer pergunta corporativa.', isHtml: true }
   ]);
   const [isTyping, setIsTyping] = useState(false);
   const chatEndRef = useRef(null);
@@ -89,10 +89,7 @@ export default function Clients() {
   };
 
   const processAIAgentLogic = async (msg) => {
-    const apiKey = localStorage.getItem('gemini_api_key');
-    if (!apiKey) {
-      return `⚠️ **Sistema Integrado de IA Bloqueado (Falta Chave)**\n\nComo solicitado, o sistema agora roda **100% na Nuvem**. Para usar a IA interativa com seus dados, configure a nuvem:\n\n1. Vá na aba **Configurações** no menu lateral.\n2. Insira sua **API Key do Google Gemini**.\n\n*(Gere sua chave gratuita de desenvolvedor em 1 minuto em aistudio.google.com)*`;
-    }
+    const apiKey = 'AIzaSyBrn2nskwDcmhSDLPnDXQYk2_wqcvGIeYg';
 
     try {
       const simplifiedDB = clients.slice(0, 50).map(c => ({ name: c.name, uf: c.uf, stat: c.status, val: c.volumeTotal }));
