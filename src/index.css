@@ -1,0 +1,84 @@
+:root {
+  /* Premium Dark Theme */
+  --color-bg-deep: #070b14;      /* Deep Navy/Black */
+  --color-bg-charcoal: #151e2b;  /* Charcoal */
+  --color-text-main: #f8fafc;    /* White/Light Grey */
+  --color-text-muted: #94a3b8;   /* Muted Grey */
+  --color-accent-blue: #3b82f6;  /* Electric Blue */
+  --color-accent-cyan: #06b6d4;  /* Cyan */
+  --color-accent-gold: #fbbf24;  /* Subtle Gold */
+  --color-danger: #ef4444;       /* Red for churn */
+  --color-success: #10b981;      /* Green for success */
+
+  /* Glassmorphism */
+  --glass-bg: rgba(21, 30, 43, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --glass-blur: blur(16px);
+
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--color-text-main);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg-deep);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.03), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.03), transparent 25%);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+}
+
+* { box-sizing: border-box; }
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-deep); }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent-blue); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent-blue), var(--color-accent-cyan));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.text-muted { color: var(--color-text-muted); }
+.text-gold { color: var(--color-accent-gold); }
+.text-cyan { color: var(--color-accent-cyan); }
+.text-blue { color: var(--color-accent-blue); }
+.text-danger { color: var(--color-danger); }
+.text-success { color: var(--color-success); }
